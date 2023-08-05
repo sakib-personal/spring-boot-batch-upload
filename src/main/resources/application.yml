@@ -21,6 +21,10 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         jdbc:
           time_zone: UTC
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
 
 file:
   store:
