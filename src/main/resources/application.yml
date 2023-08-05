@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  batch:
+    initialize-schema: ALWAYS
+    job:
+      enabled: false # disable running job at application startup
+  datasource:
+    url: jdbc:postgresql://localhost:5432/customer_db
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+      defer-datasource-initialization: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          time_zone: UTC
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+
+file:
+  store:
+    temporary:
+      location: "/mnt/Workspace/CREWW/Projects/Spring-batch-example/temporary-imported-files/"
