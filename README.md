@@ -42,3 +42,18 @@
     + Set a name for the application at the right top side.
     + Select the Amazon Corretto JDK 17 and main application class.
     + Now press Shift & F10 button at a time.
+
+6. **APIs**
+   <br/>**CSV file import API**
+   + Use Post method.
+   + Add multipart file request with the request parameter "file".
+   + Here is the API URL for local environment.
+      ```bash
+       localhost:8080/api/v1/import-csv-file/customer
+      ```
+   **Get customer list**
+   + Use Get method.
+   + Here is the API URL for local environment with request parameters.
+      ```bash
+       localhost:8080/api/v1/customers?page=1&pageSize=25
+      ```
